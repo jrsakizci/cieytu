@@ -16,17 +16,25 @@
             .result-items {
                 .result-item {
                     color:#8b8b8b;
+                    
                     font-weight:bold;
                     overflow:hidden;
                     margin:15px 0px;
+                    &.correct {
+                        color:green;
+                    }
+                    &.false {
+                        color:red;
+                    }
                     .minus, .plus {
                         float:left;
                         width:25px;
                     }
                     .primary-text {
-                        float: right;
-                        width: calc(100% - 25px);
+                        float: left;
+                        width: calc(100% - 50px);
                         text-align: left;
+                        word-break: break-all;
                     }
                     &:after {
                         content:'';
