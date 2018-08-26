@@ -1,0 +1,49 @@
+.result-wrapper {
+    height:100%;
+    .result-container {
+        position:relative;
+        height:100%;
+        .result-heading,
+        .result-content {
+            margin: 10px 0px 70px 0px;
+        }
+        .result-content {
+            max-height: 60%;
+            overflow: scroll;
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            .result-items {
+                .result-item {
+                    color:#8b8b8b;
+                    font-weight:bold;
+                    overflow:hidden;
+                    margin:15px 0px;
+                    .minus, .plus {
+                        float:left;
+                        width:25px;
+                    }
+                    .primary-text {
+                        float: right;
+                        width: calc(100% - 25px);
+                        text-align: left;
+                    }
+                    &:after {
+                        content:'';
+                        display:table;
+                        clear:both;
+                    }
+                }
+            }
+        }
+        .result-button {
+            .primary-btn {
+                position: absolute;
+                bottom: 70px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+        
+    }
+}

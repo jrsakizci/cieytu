@@ -1,0 +1,18 @@
+{
+    "presets": [
+        "env", "react"
+    ],
+    "plugins": [
+        ["module-resolver", {
+          "extensions": [ "", ".js" ],
+          "alias": {
+            "@Assets": "./src/app/assets/",
+            "@Atoms": "./src/app/components/atoms",
+            "@Molecules": "./src/app/components/molecules",
+            "@Organisms": "./src/app/components/organisms",
+            "@Templates": "./src/app/components/templates",
+            "@Pages": "./src/app/components/pages"
+          }
+        }], "babel-plugin-transform-object-rest-spread"
+      ]
+}

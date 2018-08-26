@@ -1,0 +1,38 @@
+.question-wrapper {
+    .content-container {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
+    .question-heading {
+        margin: 10px 0px 30px 0px;
+     
+    }
+    .question-content {
+        .primary-text {
+            margin:10px 0px;
+            font-size:15px;
+            font-weight:bold;
+        }
+    }
+    .question-buttons {
+        width:220px;
+        margin:0 auto;
+        button {
+            margin:0px 5px;
+            width:100px;
+            height:30px;
+            background:transparent;
+            border:1px solid #000;
+            &:first-child{
+                color:green;
+                font-weight:bold;
+            }
+            &:last-child {
+                color:red;
+                font-weight:bold;
+            }
+        }
+    }
+}
