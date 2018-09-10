@@ -11,4 +11,8 @@
 
 - Redux Dev Tools also installed, so you can see actions on devtools.
 
+<<<<<<< HEAD
 - I've spent 10 hours for this project. (4 hrs for coding, 6 hrs for environmental setups etc..)
+=======
+- I've spent 10 hours for this project. (4 hrs for coding, 6 hrs for environmental setups etc..)
+>>>>>>> ec562062141f2787e1daf9ae1a18359ca7f22f2a
