@@ -9,35 +9,6 @@ import QuestionPageButtons from '@Molecules/question-buttons';
 import Loading from '@Atoms/Loading';
 
 class QuestionPageContent extends Component {
-    answer(answer) {
-        const { answerQuestion, currentQuestion, questions, updateAnswers, correctAnswers } = this.props;
-
-        let payload = {
-            id: currentQuestion - 1,
-            data: answer
-        };
-        answerQuestion(payload);
-
-        if (questions[payload.id].correct_answer == answer) {
-            updateAnswers(correctAnswers + 1);
-        }
-
-        this.nextQuestion();
-    }
-    nextQuestion() {
-        const { changeCurrentQuestion, currentQuestion, questionCount, } = this.props;
-        if (currentQuestion !== questionCount) {
-            changeCurrentQuestion(currentQuestion + 1);
-        } else if (currentQuestion === questionCount) {
-            this.goPage('/results');
-        } else {
-            return;
-        }
-    }
-    goPage(page) {
-        const { history } = this.props;
-        history.push(page);
-    }
     render() {
         const { currentQuestion, questions, isLoading, error, isExamStarted } = this.props;
         return (
@@ -55,7 +26,7 @@ class QuestionPageContent extends Component {
                                 totalQuestion={questions.length}>
                                 {questions[currentQuestion - 1].question}
                             </QuestionPageContext>
-                            <QuestionPageButtons click={(answer) => this.answer(answer)} />
+                            <QuestionPageButtons click={(answer) => this.props.answer(answer)} />
                         </Fragment>
                 }
             </div>
@@ -74,6 +45,9 @@ QuestionPageContent.propTypes = {
     updateAnswers: PropTypes.func,
     isLoading: PropTypes.bool.isRequired,
     updateCorrectAnswers: PropTypes.func,
-    error: PropTypes.bool
+    error: PropTypes.bool,
+    answer: PropTypes.func,
+    goPage: PropTypes.func,
+    nextQuestion: PropTypes.func
 }
 export default QuestionPageContent;

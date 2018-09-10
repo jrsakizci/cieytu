@@ -20,7 +20,7 @@ const questionReducer = (state = initialState, action) => {
             state = { ...state, isLoading: false, error: true }
             return state;
         case ANSWER_QUESTION:
-            const newState = {...state} // clone the array
+            const newState = { ...state };
             newState.questions[action.payload.id].answer = action.payload.data;
             return state = newState;
         case UPDATE_CORRECT_ANSWERS: 

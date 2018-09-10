@@ -10,3 +10,5 @@
 - I thought if "organisms" are living things, so i could create a container there and transform information to molecules - atoms from there. So its how it works right now.
 
 - Redux Dev Tools also installed, so you can see actions on devtools.
+
+- I've spent 10 hours for this project. (4 hrs for coding, 6 hrs for environmental setups etc..)
